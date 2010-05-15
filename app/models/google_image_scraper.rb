@@ -1,9 +1,7 @@
 class GoogleImageScraper
   def self.find_first_image_for_keyword(keyword)
     require 'net/http'
-    require 'rest_client'
     require 'nokogiri'
-    require 'tempfile'
 
     query     = build_query keyword
     response  = Net::HTTP.get_response URI.parse query
