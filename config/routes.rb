@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resource :post_rank, :collection => {:search => :get}
   map.resource :can_pages, :collection => {:search => :get}
 
   # The priority is based upon order of creation: first created -> highest priority.
