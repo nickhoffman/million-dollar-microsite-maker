@@ -1,4 +1,27 @@
 ActionController::Routing::Routes.draw do |map|
+<<<<<<< HEAD:config/routes.rb
+  map.resource :can_pages, :collection => {:search => :get}
+
+  # The priority is based upon order of creation: first created -> highest priority.
+
+  # Sample of regular route:
+  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
+  # Keep in mind you can assign values other than :controller and :action
+
+  # Sample of named route:
+  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   map.resources :products
+
+  # Sample resource route with options:
+  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
+
+  # Sample resource route with sub-resources:
+  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+=======
+>>>>>>> c883ada9cc0a3861ede89bca99f826ce29ec3c7d:config/routes.rb
   
   map.connect ':topic/in/:location', :controller => 'microsites', :action => 'generate' 
   

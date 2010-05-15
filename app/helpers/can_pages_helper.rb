@@ -1,0 +1,2 @@
+module CanPagesHelper
+end
