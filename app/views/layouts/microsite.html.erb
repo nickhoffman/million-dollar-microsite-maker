@@ -11,7 +11,6 @@
     <meta name="generator" content="WordPress 2.8.4" /> <!-- leave this for stats -->
     
 		<%= stylesheet_link_tag '960' %> 	
-		<%= stylesheet_link_tag 'insta' %> 
 		<%= stylesheet_link_tag 'compressed' %> 		
 
 
@@ -53,6 +52,8 @@
 		filter:alpha(opacity=100);
 	}
 	a.addtoany_share_save img{border:0;width:auto;height:auto;}    </style>
+	
+			<%= stylesheet_link_tag 'insta' %> 
 
 </head>
 
@@ -66,7 +67,7 @@
             <div id="logo" class="column first">
             
                 <div class="title">
-									<h1>Toronto</h1>
+									<h1><%= @topic %> in <%= @location %></h1>
                 </div>
         
             
@@ -182,7 +183,7 @@
             
             	<div id="home_about">
 					
-					<h3 class="mast3">Welcome to premier site about <%= @topic %> in <%= @location %></h3>
+					<h3 class="mast3">Welcome to the premier site about <%= @topic %> in <%= @location %></h3>
 					
 										
 					<address>Featuring fresh content and a directory of locations in the city</address>
@@ -195,29 +196,9 @@
 
             
 					<h3 class="mast"><%= @topic %> locations in <%= @location %></h3>
-					
+						<%= render :partial => "companies/company", :collection => @companies[0..10] %> 
 										
-					<div class="home_recent_post">
-					
-												<div class="home_recent_thumb">
 
-						</div>
-							
-						
-						<div class="home_recent_title" id="post-3423">
-
-							<a href="http://www.cambridgeblog.org/2010/05/witch-hunts-and-the-hammer-of-witches-or-sin-punishment-and-retribution/" rel="bookmark" title="Permanent Link to Witch Hunts and The Hammer of Witches &#8211; or &#8211; Sin, Punishment, and Retribution">Witch Hunts and The Hammer of Witches &#8211; or &#8211; Sin, Punishment, and Retribution</a>
-						</div>
-						
-						<div class="home_recent_date">
-							May 7, 2010						</div>
-						
-						<div class="home_recent_auth">
-							By CambridgeBlog						</div>
-
-						
-					</div>
-					
 				<h3>Twitter resources on <%= @topic %></h3>
 				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 				<script>
