@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-<<<<<<< HEAD:config/routes.rb
   map.resource :can_pages, :collection => {:search => :get}
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -20,8 +19,6 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-=======
->>>>>>> c883ada9cc0a3861ede89bca99f826ce29ec3c7d:config/routes.rb
   
   map.connect ':topic/in/:location', :controller => 'microsite', :action => 'generate' 
   
