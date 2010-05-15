@@ -11,7 +11,7 @@ class PostRankSearcher
     feed_hashes = []
     @articles   = []
 
-    xml.xpath('/feeds/feed')[0..3].map do |node|
+    xml.xpath('/feeds/feed').map do |node|
       xml_hash    = node.children.at('//xml-hash').text
       description = node.children.at('//description').text
 
@@ -23,7 +23,7 @@ class PostRankSearcher
 
     @articles.each do |article|
       query     = build_top_posts_query article[:feed_hash]
-      puts "top posts query = #{query}"
+#     puts "top posts query = #{query}"
       response  = Net::HTTP.get_response URI.parse query
       xml       = Nokogiri::XML response.body
 
