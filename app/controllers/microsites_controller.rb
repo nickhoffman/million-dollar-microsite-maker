@@ -6,6 +6,8 @@ class MicrositesController < ApplicationController
     @companies = CanPages.search :loc => params[:location], :key => params[:topic]
     @articles = PostRankSearcher.search_by_topic params[:topic]
     
+    @images = GoogleImageScraper.find_first_image_for_keyword(params[:topic])
+    
     # debugger
     
     @location = params[:location]

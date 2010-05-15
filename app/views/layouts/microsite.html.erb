@@ -27,9 +27,9 @@
             <div id="logo" class="column first">
             
                 <div class="title">
-									<h1><%= @topic %> in <%= @location %></h1>
+									<h1><%= @topic.to_s.pluralize.capitalize %> in <%= @location.to_s.capitalize %></h1>
                 </div>
-        
+        			
             
             </div>
             
@@ -63,7 +63,7 @@
             	<div id="home_about">
 					
 					<h3 class="mast3">Welcome to the premier site about <%= @topic %> in <%= @location %></h3>
-					
+					<img src="<%= @images[:google_image] %>"/>
 										
 					<address>Featuring fresh content and a directory of locations in the city</address>
 					

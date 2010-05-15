@@ -22,6 +22,10 @@ h1 {
 	height: 240px;
 }
 
+#home_about {
+	margin-bottom: 1em;
+}
+
 #footer {
 	background: #eee;
 	height: 100px;
@@ -54,7 +58,7 @@ ol li {
 }
 
 .article h1 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 }
 
 input[type="text"] {

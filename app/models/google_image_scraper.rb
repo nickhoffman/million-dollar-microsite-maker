@@ -15,6 +15,8 @@ class GoogleImageScraper
     File.open("#{RAILS_ROOT}/#{google_image}", 'w') {|f| f.write response}
 
     curl_output = `curl -s 'http://204.15.199.173:8000/rest/' -F "method=visual_search" -F "image=@#{google_image};filename=#{keyword}.jpg"`.strip
+    puts curl_output
+    
     json      = JSON.parse curl_output
 
     similar_images = []
