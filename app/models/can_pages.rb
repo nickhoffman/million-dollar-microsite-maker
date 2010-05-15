@@ -5,7 +5,7 @@ class CanPages
 
     query       = build_query options
     puts "search> query = [#{query.inspect}]"
-    puts
+#   puts
     response    = Net::HTTP.get_response URI.parse query
     xml         = Nokogiri::XML response.body
     @companies  = []
@@ -19,9 +19,9 @@ class CanPages
 
 #     puts "children = [#{xml_result.children}]"
       xml_result.children.map do |xml_result_attribute|
-        puts "  --------------"
-        puts "  xml_result_attribute = [#{xml_result_attribute}]"
-        puts
+#       puts "  --------------"
+#       puts "  xml_result_attribute = [#{xml_result_attribute}]"
+#       puts
 
         attribute = xml_result_attribute.name.squish
         value     = xml_result_attribute.text.squish
