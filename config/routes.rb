@@ -21,5 +21,8 @@ ActionController::Routing::Routes.draw do |map|
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
   
   map.connect ':topic/in/:location', :controller => 'microsites', :action => 'generate' 
+
+  map.connect ':controller/:action/:id' 
+  map.connect ':controller/:action/:id.:format' 
   
 end
