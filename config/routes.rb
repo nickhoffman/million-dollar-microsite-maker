@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.connect ':topic/in/:location', :controller => 'microsite', :action => 'generate' 
+  map.connect ':topic/in/:location', :controller => 'microsites', :action => 'generate' 
   
 end
