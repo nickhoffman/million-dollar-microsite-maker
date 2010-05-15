@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+<<<<<<< HEAD:config/routes.rb
   map.resource :can_pages, :collection => {:search => :get}
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -19,27 +20,9 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+=======
+>>>>>>> c883ada9cc0a3861ede89bca99f826ce29ec3c7d:config/routes.rb
   
-  # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
-  #   end
-
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  map.connect ':topic/in/:location', :controller => 'microsite', :action => 'generate' 
+  
 end

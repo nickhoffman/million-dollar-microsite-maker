@@ -1,0 +1,2 @@
+module MicrositeHelper
+end
