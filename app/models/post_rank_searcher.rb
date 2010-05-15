@@ -4,26 +4,28 @@ class PostRankSearcher
 
     require 'net/http'
     require 'nokogiri'
-
-    query       = build_topic_query topic
+query       = build_topic_query topic
     response    = Net::HTTP.get_response URI.parse query
     xml         = Nokogiri::XML response.body
     feed_hashes = []
+    descriptions  = []
     @articles   = []
 
-    xml.xpath('/feeds/feed')[0..3].map do |node|
-      xml_hash    = node.children.at('//xml-hash').text
-      description = node.children.at('//description').text
 
-      @articles.push({
-        :feed_hash    => xml_hash,
-        :description  => description
-      })
+    xml.xpath('/feeds/feed/xml-hash').each do |node|
+      feed_hashes.push node.text
+    end
+
+    xml.xpath('/feeds/feed/description').each do |node|
+      descriptions.push node.text
+    end
+
+    feed_hashes.each_with_index do |feed_hash, i|
+      @articles.push({:feed_hash => feed_hash, :description => descriptions[i]})
     end
 
     @articles.each do |article|
       query     = build_top_posts_query article[:feed_hash]
-      puts "top posts query = #{query}"
       response  = Net::HTTP.get_response URI.parse query
       xml       = Nokogiri::XML response.body
 
