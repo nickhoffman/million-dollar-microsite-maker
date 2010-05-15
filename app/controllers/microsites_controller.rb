@@ -4,6 +4,7 @@ class MicrositesController < ApplicationController
   
   def generate
     @companies = CanPages.search :loc => params[:location], :key => params[:topic]
+    @articles = PostRankSearcher.search_by_topic params[:topic]
     
     # debugger
     

@@ -1,13 +1,73 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family:"",Helvetica,Arial,sans-serif;
+	font-size: 1.2em;
+}
+
+a {
+	color: #205b85 !important;
+}
+
+a h1 {
+	color: #205b85 !important;
+	font-weight: bold;
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
+#explanation {
+	height: 240px;
 }
 
 #footer {
 	background: #eee;
+	height: 100px;
+	padding-top: 10px;
+	font-size: .8em;
+	clear:both;
+}
+
+#action {
+	background-color: #ff0018;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	width: 440px;
+	-moz-border-radius: 10px;	
+}
+#action h2 {
+	color: white;
+}
+
+ol {
+	padding-left: 0px;
+}
+ol li {
+	list-style-position: inside;
 }
 
 
 .company_listing h1 {
 	font-size: 1.2em;
+}
+
+.article h1 {
+	font-size: 1.3em;
+}
+
+input[type="text"] {
+	border-width: 0px;
+	border-bottom: 1px solid black;
+	width: 100px;
+	font-size: 1.2em;
+	background-color: #eee;
+	color: #333;
+	margin: 5px;
+	padding: 5px;
+}
+
+#latest_post  {
+/*	background-color: red;*/
 }
