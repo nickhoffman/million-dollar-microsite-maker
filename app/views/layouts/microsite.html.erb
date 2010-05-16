@@ -62,8 +62,8 @@
             
             	<div id="home_about">
 					
-					<h3 class="mast3">Welcome to the premier site about <%= @topic %> in <%= @location %></h3>
-					<img src="<%= @images[:google_image] %>"/>
+					<h3 class="mast3">Welcome to the premier site about <%= @topic.downcase %> in <%= @location %></h3>
+					<img src="/temp_images/<%= @image %>"/>
 										
 					<address>Featuring fresh content and a directory of locations in the city</address>
 					
@@ -74,7 +74,7 @@
 				<div class="column span-4 first">
 
             
-					<h3 class="mast"><%= @topic %> locations in <%= @location %></h3>
+					<h3 class="mast"><%= @topic.capitalize %> locations in <%= @location.capitalize %></h3>
 						<%= render :partial => "companies/company", :collection => @companies[0..8] %> 
 										
 
@@ -121,7 +121,7 @@
                 	<div id="side_categories">
 
             
-						<h3 class="mast">More info about <%= @topic %></h3>
+						<h3 class="mast">More info about <%= @topic.downcase %></h3>
 							<%= image_tag "adsense.png"  %> 
 						
 												
