@@ -4,7 +4,7 @@ class CanPages
     require 'nokogiri'
 
     query       = build_query options
-    puts "search> query = [#{query.inspect}]"
+#   puts "search> query = [#{query.inspect}]"
 #   puts
     response    = Net::HTTP.get_response URI.parse query
     xml         = Nokogiri::XML response.body
